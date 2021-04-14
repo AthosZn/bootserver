@@ -1,0 +1,15 @@
+#  application-actuator shutdown 表示支持关闭应用接口
+management:
+  endpoints:
+    web:
+      exposure:
+        include: info, health, shutdown
+  endpoint:
+    shutdown:
+      enabled: true
+
+logging:
+  level:
+    root: INFO
+  config: classpath:logback.xml
+
